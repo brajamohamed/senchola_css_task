@@ -4,52 +4,78 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url(./lauren-mancke-aOC7TSLb1o8-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
-
 .header {
-  margin: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
-#logo {
+.logo {
   width: 100px;
+  margin-left: 50px;
 }
-#navbar {
-  float: right;
-  margin-right: 50px;
+.navbar {
+  justify-self: end;
+  margin-right: 15%;
   transform: skew(-20deg);
 }
-ul > li {
-  display: inline-block;
-  padding: 0px 10px;
+.navbar ul {
+  list-style: none;
 }
-
-ul > li > a:hover {
-  color: green;
-  border-bottom: 10px solid green;
+.navbar ul li {
+  display: inline;
+  margin: 10px;
 }
-ul > li > a {
+.navbar ul li a {
   text-decoration: none;
-  transition: all 0.3s linear;
+  color: #0049b7;
+  font-weight: 600;
+  transition: all ease-in-out 0.3s;
 }
-
-#main {
-  height: 100vh;
-  background-image: url(./christin-hume-mfB1B1s4sMc-unsplash.jpg);
-  background-size: cover;
+.navbar ul li a:hover {
+  color: #beef00;
+  border-bottom: 5px solid;
 }
-
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
+}
+.content {
+  position: relative;
+}
 .container {
-  font-weight: 800;
-  color: brown;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15%;
   position: absolute;
-  top: 300px;
-  left: 620px;
+  top: 150px;
+  color: brown;
+  grid-area: b;
 }
 #heading {
   color: blue;
-  margin-right: 10px;
 }
 #subheading {
   color: green;
+}
+@media screen and (max-width: 768px) {
+  .navbar ul li a {
+    color: white;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "b";
+  }
+  .container {
+    top: 50vh;
+    color: red;
+  }
 }
