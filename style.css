@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  margin: 20px;
+}
+#logo {
+  width: 100px;
+}
+#navbar {
+  float: right;
+  margin-right: 50px;
+  transform: skew(-20deg);
+}
+ul > li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+ul > li > a:hover {
+  color: green;
+  border-bottom: 10px solid green;
+}
+ul > li > a {
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+#main {
+  height: 100vh;
+  background-image: url(./christin-hume-mfB1B1s4sMc-unsplash.jpg);
+  background-size: cover;
+}
+
+.container {
+  font-weight: 800;
+  color: brown;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 300px;
+  left: 620px;
+}
+#heading {
+  color: blue;
+  margin-right: 10px;
+}
+#subheading {
+  color: green;
+}
